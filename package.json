@@ -1,0 +1,38 @@
+{
+  "name": "@itshkins/create",
+  "version": "1.0.0",
+  "description": "NPM create package",
+  "main": "./bin/create.cjs",
+  "files": [
+    "bin",
+    "templates",
+    "node_modules"
+  ],
+  "bin": {
+    "@itshkins": "./bin/create.cjs"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "start": "npm run clean && NODE_ENV=development rollup -c -w",
+    "build": "npm run clean && NODE_ENV=production rollup -c",
+    "test": "npm run test:unit",
+    "test:unit": "vitest src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itshkins/create.git"
+  },
+  "keywords": [
+    "create",
+    "vue"
+  ],
+  "author": "itshkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itshkins/create/issues"
+  },
+  "homepage": "https://github.com/itshkins/create#readme",
+  "devDependencies": {
+    "fs-extra": "11.1.1"
+  }
+}
