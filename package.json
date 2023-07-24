@@ -1,6 +1,6 @@
 {
   "name": "@itshkins/create",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM create package",
   "main": "./bin/create.cjs",
   "files": [
@@ -32,7 +32,7 @@
     "url": "https://github.com/itshkins/create/issues"
   },
   "homepage": "https://github.com/itshkins/create#readme",
-  "devDependencies": {
+  "dependencies": {
     "fs-extra": "11.1.1"
   }
 }
