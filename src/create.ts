@@ -1,6 +1,12 @@
 #!/usr/bin/env node
-import {join} from 'node:path'
+import {fileURLToPath} from 'url'
+import {join, dirname} from 'node:path'
 import fs from 'fs-extra'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const cwd = process.cwd()
+
+console.log({__dirname, cwd})
 
 const [, , projectName] = process.argv
 const templateName = `vfsd`
