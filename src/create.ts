@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const {join, basename} = require('path')
-const fs = require('fs-extra')
+import {join} from 'node:path'
+import fs from 'fs-extra'
 
 const [, , projectName] = process.argv
 const templateName = `vfsd`
