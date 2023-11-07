@@ -1,0 +1,10 @@
+/node_modules/
+/tmp/
+/build/
+/config/config.js
+/cache/**/*.json
+/cache/**/*.gz
+/cache/**/*.js
+/.idea/
+.DS_Store
+Thumbs.db
