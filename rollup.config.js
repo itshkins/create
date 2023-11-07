@@ -3,7 +3,7 @@ import {defineConfig} from 'rollup'
 import esbuild from 'rollup-plugin-esbuild'
 
 const PREFIX = `create`
-const INPUT = `src/index.ts`
+const INPUT = `src/create.ts`
 
 const isDev = process.env.NODE_ENV === `development`
 
