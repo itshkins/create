@@ -6,7 +6,7 @@
   "main": "dist/create.cjs",
   "files": [
     "dist",
-    "templates",
+    "templates/backend-ts",
     "node_modules"
   ],
   "bin": {
