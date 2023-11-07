@@ -1,20 +1,21 @@
 {
+  "type": "module",
   "name": "@itshkins/create",
   "version": "1.1.9",
   "description": "NPM create package",
-  "main": "dist/create.cjs",
+  "main": "dist/create.mjs",
   "files": [
     "dist",
     "templates/backend-ts",
     "node_modules"
   ],
   "bin": {
-    "@itshkins": "dist/create.cjs"
+    "@itshkins": "dist/create.mjs"
   },
   "scripts": {
     "clean": "rm -rf ./dist",
-    "start": "npm run clean && NODE_ENV=development rollup -c -w",
-    "build": "npm run clean && NODE_ENV=development rollup -c",
+    "start": "npm run clean && NODE_ENV=development unbuild",
+    "build": "npm run clean && NODE_ENV=production unbuild",
     "test": "npm run test:unit",
     "test:unit": "vitest src"
   },
