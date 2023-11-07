@@ -15,7 +15,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "start": "npm run clean && NODE_ENV=development rollup -c -w",
-    "build": "npm run clean && NODE_ENV=production rollup -c",
+    "build": "npm run clean && NODE_ENV=development rollup -c",
     "test": "npm run test:unit",
     "test:unit": "vitest src"
   },
