@@ -3,14 +3,14 @@
   "name": "@itshkins/create",
   "version": "1.1.5",
   "description": "NPM create package",
-  "main": "dist/create.min.cjs",
+  "main": "dist/create.cjs",
   "files": [
     "dist",
     "templates",
     "node_modules"
   ],
   "bin": {
-    "@itshkins": "dist/create.min.cjs"
+    "@itshkins": "dist/create.cjs"
   },
   "scripts": {
     "clean": "rm -rf ./dist",
