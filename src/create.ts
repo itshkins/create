@@ -15,7 +15,7 @@ console.log({template, destination})
 const __dirname__ = dirname(fileURLToPath(import.meta.url))
 const __cwd__ = process.cwd()
 
-const templatePath = join(__dirname__, `templates`, template)
+const templatePath = join(__dirname__, `..`, `templates`, template)
 const projectPath = join(__cwd__, destination)
 console.log({__dirname__, __cwd__, templatePath, projectPath})
 
