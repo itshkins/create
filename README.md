@@ -3,5 +3,5 @@
 ## Usage
 
 ```bash
-npm create @itshkins@latest my-project
+npm create @itshkins@latest -d backend-ts -t my-backend-project
 ```
