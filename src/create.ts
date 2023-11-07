@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import {fileURLToPath} from 'node:url'
-import {join} from 'node:path'
+import {join, dirname} from 'node:path'
 import fs from 'fs-extra'
 import {program} from 'commander'
 
@@ -12,7 +12,7 @@ const {template, destination} = program
 console.log({template, destination})
 
 // @ts-ignore
-const __dirname__ = fileURLToPath(import.meta.url)
+const __dirname__ = dirname(fileURLToPath(import.meta.url))
 const __cwd__ = process.cwd()
 
 const templatePath = join(__dirname__, `templates`, template)
