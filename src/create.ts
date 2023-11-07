@@ -10,7 +10,7 @@ const cwd = process.cwd()
 const [, , projectName] = process.argv
 const projectPath = join(cwd, projectName)
 
-const templateName = `vfsd`
+const templateName = process.argv[1] || process.exit(1)
 const templatePath = join(__dirname, `../templates`, templateName)
 
 const run = async () => {
