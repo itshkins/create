@@ -15,9 +15,9 @@ console.log({template, destination})
 const __dirname__ = fileURLToPath(import.meta.url)
 const __cwd__ = process.cwd()
 
+const templatePath = join(__dirname__, `../../templates`, template)
 const projectPath = join(__cwd__, destination)
-const templatePath = join(__dirname__, `templates`, template)
-console.log({__cwd__, projectPath, templatePath})
+console.log({__cwd__, templatePath, projectPath})
 
 const run = async () => {
   await fs.copy(templatePath, projectPath, {
