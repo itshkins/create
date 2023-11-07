@@ -14,7 +14,7 @@
   },
   "scripts": {
     "clean": "rm -rf ./dist",
-    "start": "npm run clean && NODE_ENV=development unbuild",
+    "build:dev": "npm run clean && NODE_ENV=development unbuild",
     "build": "npm run clean && NODE_ENV=production unbuild",
     "test": "npm run test:unit",
     "test:unit": "vitest src"
