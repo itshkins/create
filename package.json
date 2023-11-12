@@ -1,12 +1,13 @@
 {
   "type": "module",
   "name": "@itshkins/create",
-  "version": "1.1.28",
+  "version": "1.2.0",
   "description": "NPM create package",
   "main": "dist/create.mjs",
   "files": [
     "dist",
     "templates/backend-ts",
+    "templates/nuxt3",
     "node_modules"
   ],
   "bin": {
