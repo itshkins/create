@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "GraphikLCG";
+  src: local("GraphikLCG"), local("GraphikLCG Regular"), url("~/assets/fonts/GraphikLCG-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GraphikLCG";
+  src: local("GraphikLCG Italic"), local("GraphikLCG Regular Italic"), url("~/assets/fonts/GraphikLCG-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GraphikLCG";
+  src: local("GraphikLCG Medium"), url("~/assets/fonts/GraphikLCG-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GraphikLCG";
+  src: local("GraphikLCG Bold"), url("~/assets/fonts/GraphikLCG-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
