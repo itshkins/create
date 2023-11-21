@@ -29,15 +29,75 @@
 }
 
 @mixin container {
+  display: flex;
+  flex-flow: column;
   margin-left: auto;
   margin-right: auto;
-  width: $width--desktop;
+  width: $width--tv;
 
-  @include mobile() {
-    width: $width--mobile;
+  @include desktop {
+    width: $width--desktop;
   }
 
-  @include tablet() {
+  @include notebook {
+    width: $width--notebook;
+  }
+
+  @include tablet {
     width: $width--tablet;
+  }
+
+  @include mobile {
+    width: $width--mobile;
+  }
+}
+
+@mixin inner {
+  padding-left: $padding--tv;
+  padding-right: $padding--tv;
+
+  @include desktop {
+    padding-left: $padding--desktop;
+    padding-right: $padding--desktop;
+  }
+
+  @include notebook {
+    padding-left: $padding--notebook;
+    padding-right: $padding--notebook;
+  }
+
+  @include tablet {
+    padding-left: $padding--tablet;
+    padding-right: $padding--tablet;
+  }
+
+  @include mobile {
+    padding-left: $padding--mobile;
+    padding-right: $padding--mobile;
+  }
+}
+
+@mixin outer {
+  margin-left: -$margin--tv;
+  margin-right: -$margin--tv;
+
+  @include desktop {
+    margin-left: -$margin--desktop;
+    margin-right: -$margin--desktop;
+  }
+
+  @include notebook {
+    margin-left: -$margin--notebook;
+    margin-right: -$margin--notebook;
+  }
+
+  @include tablet {
+    margin-left: -$margin--tablet;
+    margin-right: -$margin--tablet;
+  }
+
+  @include mobile {
+    margin-left: -$margin--mobile;
+    margin-right: -$margin--mobile;
   }
 }

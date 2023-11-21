@@ -9,7 +9,9 @@ Html(lang="ru")
     Link(rel="preload" href="~/assets/fonts/GraphikLCG-Medium.woff2" as="font" type="font/woff2")
     Link(rel="preload" href="~/assets/fonts/GraphikLCG-Bold.woff2" as="font" type="font/woff2")
   Body
-    | hello
+    .header-with-hero HeaderWithHero
+      Header
+      Hero
 </template>
 
 <script lang="ts" setup>

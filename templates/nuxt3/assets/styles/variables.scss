@@ -2,16 +2,16 @@ $white: #ffffff;
 $black: #000000;
 
 $padding--mobile: 16px;
-$width--mobile: 320px - 16px + 2 * $padding--mobile;
+$width--mobile: 320px - 2 * 16px + 2 * $padding--mobile;
 
 $padding--tablet: 32px;
-$width--tablet: 760px - 32px + 2 * $padding--tablet;
+$width--tablet: 760px - 2 * 32px + 2 * $padding--tablet;
 
 $padding--notebook: 40px;
 $width--notebook: 960px - 2 * 40px + 2 * $padding--notebook;
 
 $padding--desktop: 40px;
-$width--desktop: 1280px - 2 * 40px + 2 * $padding--desktop;
+$width--desktop: 1280px - 2 * 40px + 2 * $padding--desktop + 2 ;
 
 $padding--tv: 120px;
 $width--tv: 1680px - 2 * 120px + 2 * $padding--tv;
