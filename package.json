@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@itshkins/create",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "NPM create package",
   "main": "dist/create.mjs",
   "files": [
