@@ -2,7 +2,7 @@
 input(
   type="email"
   name="email"
-  placeholder="Email"
+  placeholder="Эл. почта"
   autocomplete="email"
   required
 )

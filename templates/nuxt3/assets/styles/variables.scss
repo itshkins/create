@@ -13,5 +13,5 @@ $width--notebook: 960px - 2 * 40px + 2 * $padding--notebook;
 $padding--desktop: 40px;
 $width--desktop: 1280px - 2 * 40px + 2 * $padding--desktop + 2 ;
 
-$padding--tv: 120px;
+$padding--tv: 60px;
 $width--tv: 1680px - 2 * 120px + 2 * $padding--tv;

@@ -1,13 +1,12 @@
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 html,
 body,
 #__nuxt {
   height: 100%;
+}
+
+#__nuxt {
+  display: flex;
+  flex-flow: column;
 }
 
 html {
@@ -17,9 +16,22 @@ html {
 body {
   margin: 0;
 
-  box-sizing: border-box;
   font: 400 14px/20px "GraphikLCG", "Arial", sans-serif;
 
   background-color: $white;
   color: $black;
+
+  &.with-modal {
+    overflow: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  @include visually-hidden;
 }

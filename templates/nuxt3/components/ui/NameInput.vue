@@ -2,7 +2,7 @@
 input(
   type="text"
   name="name"
-  placeholder="Имя"
+  placeholder="Ваше имя"
   autocomplete="name"
   required
 )

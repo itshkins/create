@@ -1,3 +1,19 @@
+@mixin visually-hidden() {
+  position: absolute;
+  z-index: -9999;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  border: none;
+}
+
 @mixin mobile {
   @media screen and (max-width: $width--tablet - 1px) {
     @content;
@@ -28,6 +44,12 @@
   }
 }
 
+@mixin notebook-tablet {
+  @media screen and (min-width: $width--tablet) and (max-width: $width--desktop - 1px) {
+    @content;
+  }
+}
+
 @mixin container {
   display: flex;
   flex-flow: column;
@@ -52,7 +74,7 @@
   }
 }
 
-@mixin inner {
+@mixin padding {
   padding-left: $padding--tv;
   padding-right: $padding--tv;
 
@@ -77,27 +99,81 @@
   }
 }
 
-@mixin outer {
-  margin-left: -$margin--tv;
-  margin-right: -$margin--tv;
+@mixin margin {
+  margin-left: -$padding--tv;
+  margin-right: -$padding--tv;
 
   @include desktop {
-    margin-left: -$margin--desktop;
-    margin-right: -$margin--desktop;
+    margin-left: -$padding--desktop;
+    margin-right: -$padding--desktop;
   }
 
   @include notebook {
-    margin-left: -$margin--notebook;
-    margin-right: -$margin--notebook;
+    margin-left: -$padding--notebook;
+    margin-right: -$padding--notebook;
   }
 
   @include tablet {
-    margin-left: -$margin--tablet;
-    margin-right: -$margin--tablet;
+    margin-left: -$padding--tablet;
+    margin-right: -$padding--tablet;
   }
 
   @include mobile {
-    margin-left: -$margin--mobile;
-    margin-right: -$margin--mobile;
+    margin-left: -$padding--mobile;
+    margin-right: -$padding--mobile;
+  }
+}
+
+@mixin right {
+  right: $padding--tv;
+
+  @include desktop {
+    right: $padding--desktop;
+  }
+
+  @include notebook {
+    right: $padding--notebook;
+  }
+
+  @include tablet {
+    right: $padding--tablet;
+  }
+
+  @include mobile {
+    right: $padding--mobile;
+  }
+}
+
+@mixin link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin level($size, $stroke-width:3px, $stroke-linecap:butt) {
+  width: $size;
+  height: $size;
+
+  .level-svg {
+    width: $size;
+    height: $size;
+  }
+
+  .level-svg circle {
+    $value: var(--level, 0);
+    $radius: calc(($size - $stroke-width) / 2);
+    $perimeter: calc(2 * 3.1415926536 * $radius);
+    $perimeterPercentage: calc($perimeter / 100);
+
+    cx: calc($size / 2);
+    cy: calc($size / 2);
+    r: calc(($size - $stroke-width) / 2);
+    stroke-width: $stroke-width;
+    stroke-linecap: $stroke-linecap;
+    stroke-dashoffset: calc(2*3.1415926536*($size - $stroke-width)/2/4);
+    stroke-dasharray: calc(#{$value} * #{$perimeterPercentage}) calc(#{$perimeter} - #{$value} * #{$perimeterPercentage});
   }
 }
