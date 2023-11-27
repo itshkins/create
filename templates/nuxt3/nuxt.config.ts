@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      baseURL: process.env.BASE_URL ?? `https://devtwit8.ru/api/v1/page/?path=`,
+      baseURL: process.env.BASE_URL,
     },
   },
   vite: {
