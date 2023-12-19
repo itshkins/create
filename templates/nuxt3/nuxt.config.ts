@@ -17,6 +17,11 @@ export default defineNuxtConfig({
       baseURL: process.env.BASE_URL,
     },
   },
+  css: [
+    `normalize.css/normalize.css`,
+    `${__dirname}/assets/styles/fonts.scss`,
+    `${__dirname}/assets/styles/globals.scss`,
+  ],
   vite: {
     plugins: [
       svgLoader(),
@@ -26,14 +31,13 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: /* language=scss */ `
-            @import "normalize.css/normalize.css";
-            @import "@/assets/styles/fonts";
             @import "@/assets/styles/variables";
             @import "@/assets/styles/mixins";
-            @import "@/assets/styles/globals";
           `,
         }
       }
     }
+  },
+  swiper: {
   },
 })
