@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "pug -w -P -o . src/index.pug",
+    "build": "pug -P -o . src/index.pug"
+  },
+  "devDependencies": {
+    "pug": "3.0.2",
+    "pug-cli": "1.0.0-alpha6"
+  }
+}
