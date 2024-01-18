@@ -1,0 +1,29 @@
+.link:hover {
+  text-decoration: underline !important;
+}
+
+.default-link:hover {
+  text-decoration: none !important;
+}
+
+.button:hover {
+  filter: grayscale(100%);
+}
+
+@media only screen and (max-width: 619px) {
+  .container {
+    width: 320px !important;
+  }
+
+  .w100p {
+    width: 100% !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+}
